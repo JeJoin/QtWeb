@@ -1,0 +1,7 @@
+.vs
+objs
+Debug
+Release
+*.o
+*.TMP
+
