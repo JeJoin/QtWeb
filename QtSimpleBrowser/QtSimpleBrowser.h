@@ -13,10 +13,15 @@ class QtSimpleBrowser : public QMainWindow
 
 public:
     QtSimpleBrowser(QWidget *parent = Q_NULLPTR);
+
+public slots:
+    void slotNewFile();
+
     
 private:
     void _initBrowserLayout();
     void _initWebEngine();
+    void _setupMune();
 
 private:
     Ui::QtSimpleBrowserClass ui;
