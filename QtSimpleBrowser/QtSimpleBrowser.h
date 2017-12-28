@@ -4,8 +4,8 @@
 #include "ui_QtSimpleBrowser.h"
 
 
-class QToolBar;
-class QMenuBar;
+
+class TabWidget;
 
 class QtSimpleBrowser : public QMainWindow
 {
@@ -21,15 +21,24 @@ public slots:
 private:
     void _initBrowserLayout();
     void _initWebEngine();
+
     void _setupMune();
+    void _initFileMenu();
+    void _initEditMenu();
+    void _initViewMenu();
+
+    void _updateBookmarksToolbarActionText(bool visible);
+    void _updateNavigationBarActionText(bool visible);
 
 private:
     Ui::QtSimpleBrowserClass ui;
-
-    QMenuBar *      m_menuBar;
-    QToolBar *      m_toolBar;
+    TabWidget *     m_tabWidget;
 
     QAction *       m_historyBack;
+    QAction *       m_hideBookmarkBar;
+    QAction *       m_hideNavigationBar;
+    QAction *       m_stop;
+    QAction *       m_reload;
 
 
 };
